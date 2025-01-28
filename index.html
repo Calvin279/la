@@ -1,0 +1,59 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Control de Horas de Trabajo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Control de Horas de Trabajo</h1>
+        <form id="registroForm">
+            <div class="form-group">
+                <label>Nombre:</label>
+                <input type="text" id="nombre" required>
+            </div>
+            <div class="form-group">
+                <label>Rango:</label>
+                <input type="text" id="rango" required>
+            </div>
+            <div class="form-group">
+                <label>Fecha:</label>
+                <input type="date" id="fecha" required>
+            </div>
+            <div class="form-group">
+                <label>Hora de Entrada:</label>
+                <input type="time" id="horaEntrada" required>
+            </div>
+            <div class="form-group">
+                <label>Hora de Salida:</label>
+                <input type="time" id="horaSalida" required>
+            </div>
+            <button type="submit">Registrar</button>
+        </form>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Buscar por nombre">
+            <button id="searchButton">Buscar</button>
+        </div>
+
+        <table id="registrosTable">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Rango</th>
+                    <th>Fecha</th>
+                    <th>Hora Entrada</th>
+                    <th>Hora Salida</th>
+                    <th>Tiempo Trabajado</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody id="registrosBody"></tbody>
+        </table>
+    </div>
+
+    <div id="notificationContainer" class="notification-container"></div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
